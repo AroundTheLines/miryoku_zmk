@@ -1,0 +1,29 @@
+# Available runners configured by board.cmake.
+runners:
+- blackmagicprobe
+- nrfjprog
+
+# Default flash runner if --runner is not given.
+flash-runner: blackmagicprobe
+
+# Default debug runner if --runner is not given.
+debug-runner: blackmagicprobe
+
+# Common runner configuration values.
+config:
+  board_dir: /Users/qilewang/GithubRepos/Keyboards/zmk/app/boards/arm/nice_nano
+  # Build outputs:
+  elf_file: zmk.elf
+  hex_file: zmk.hex
+  bin_file: zmk.bin
+  # Host tools:
+  gdb: /Users/qilewang/Downloads/zephyr-sdk-0.14.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
+
+# Runner specific arguments
+args:
+  blackmagicprobe:
+    []
+
+  nrfjprog:
+    - --nrf-family=NRF52
+    - --softreset
