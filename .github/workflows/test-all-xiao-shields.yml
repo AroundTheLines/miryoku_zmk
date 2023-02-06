@@ -11,6 +11,11 @@ jobs:
     with:
       board: '["seeeduino_xiao"]'
       shield: '[
+        "clog_v2_left","clog_v2_right",
         "hummingbird",
+        "revxlp",
+        "rommana_left","rommana_right",
+        "totem_left","totem_right",
+        "xmk",
         "zaphod_lite"
       ]'
